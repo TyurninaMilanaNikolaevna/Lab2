@@ -6,5 +6,7 @@ public class GroupingComparatorClass extends WritableComparable {
 
 
     @Override
-    
+    public int compare (Object a, Object b) {
+        
+    }
 }
