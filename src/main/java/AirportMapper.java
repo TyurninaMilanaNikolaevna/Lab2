@@ -1,4 +1,6 @@
 package  lab2;
 
-public 
+import java.io.IOException;
+
+
 
