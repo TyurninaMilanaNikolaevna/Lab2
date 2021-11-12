@@ -12,8 +12,8 @@ public class AirportMapper extends Mapper <LongWritable, Text, AirportWritableCo
     public static int AIRPORT_DESCRIPTION_POSITION = 1;
 
     @Override
-    protected void map(LongWritable key, Text value, Mapper <LongWritable, Text, AirportWritableComparable, Text>, Context context) throws IOException, InterruptedException {
-
+    protected void map(LongWritable key, Text value, Mapper <LongWritable, Text, AirportWritableComparable, Text>.Context context) throws IOException, InterruptedException {
+        
     }
 }
 
