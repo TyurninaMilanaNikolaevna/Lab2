@@ -7,6 +7,6 @@ public class GroupingComparatorClass extends WritableComparable {
 
     @Override
     public int compare (Object a, Object b) {
-        return Inter.compare((AirportWritableComparable) a).getAirport
+        return Integer.compare(((AirportWritableComparable) a).getAirportCode, ((AirportWritableComparable) b).getAirportCode);
     }
 }
