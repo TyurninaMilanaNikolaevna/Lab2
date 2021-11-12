@@ -2,9 +2,9 @@ package lab2;
 
 import org.apache.hadoop.io.WritableComparator;
 
-public class GroupingComparatorClass extends WritableComparator {
+public class GroupingComparator extends WritableComparator {
 
-    public GroupingComparatorClass() {
+    public GroupingComparator() {
         super(AirportWritableComparable.class, true);
     }
 
