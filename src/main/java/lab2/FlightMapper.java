@@ -20,7 +20,7 @@ public class FlightMapper extends Mapper<LongWritable, Text, AirportWritableComp
             int airportCode = Integer.parseInt(flightDescription[DEST_AIRPORT_ID_POSITION]);
             String flightDelay = flightDescription[ARR_DELAY_POSITION];
             if (Float.parseFloat(flightDelay) != 0) {
-                context.write(new AirportWritableComparable(airportCode, INDICATOR), new Text(airportDescription));
+                context.write(new AirportWritableComparable(airportCode, INDICATOR), new Text(flightDelay));
             }
         }
     }
