@@ -2,9 +2,11 @@ package lab2;
 
 
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.mapred.lib.MultipleInputs;
 import org.apache.hadoop.mapreduce.Job;
 
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.MultipleOutputs;
 
 public class FlightDelayTimeApp {
     public static void main(String[] args) throws Exception {
@@ -12,7 +14,7 @@ public class FlightDelayTimeApp {
         job.setJarByClass(FlightDelayTimeApp.class);
         job.setJobName("Flight Delay Time App");
 
-        
+        MultipleInputs.addInputPath();
 
         job.setNumReduceTasks(2);
         System.exit(job.waitForCompletion(true) ? 0 : 1);
