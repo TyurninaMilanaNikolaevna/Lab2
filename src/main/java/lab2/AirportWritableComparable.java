@@ -17,5 +17,13 @@ public class AirportWritableComparable {
         return indicator;
     }
 
-    public int CompareTo()
+    @Override
+    public int CompareTo(AirportWritableComparable object) {
+
+    }
+
+    @Override
+    public 
+
+    @Override
 }
