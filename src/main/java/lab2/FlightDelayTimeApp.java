@@ -12,6 +12,8 @@ public class FlightDelayTimeApp {
         job.setJarByClass(FlightDelayTimeApp.class);
         job.setJobName("Flight Delay Time App");
 
+        
+
         job.setNumReduceTasks(2);
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
