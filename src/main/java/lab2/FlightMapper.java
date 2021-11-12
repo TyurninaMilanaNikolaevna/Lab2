@@ -2,4 +2,5 @@ package lab2;
 
 import java.io.IOException;
 
-public 
+public class FlightMapper {
+}
