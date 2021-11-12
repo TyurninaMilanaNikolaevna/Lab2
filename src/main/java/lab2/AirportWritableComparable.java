@@ -8,4 +8,6 @@ public class AirportWritableComparable {
         this.airportCode = airportCode;
         this.indicator = indicator;
     }
+
+    
 }
