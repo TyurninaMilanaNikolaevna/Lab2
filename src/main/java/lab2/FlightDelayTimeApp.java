@@ -13,7 +13,7 @@ public class FlightDelayTimeApp {
         job.setJobName("Flight Delay Time App");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, FlightMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, AirportMapper.class);
-        FileOutputFormat
+        FileOutputFormat.setOutputPath(new Path((args[2])));
         job.setNumReduceTasks(2);
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
