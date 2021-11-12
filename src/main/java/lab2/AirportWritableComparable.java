@@ -9,7 +9,13 @@ public class AirportWritableComparable {
         this.indicator = indicator;
     }
 
-    public getAirportCode() {
+    public int getAirportCode() {
         return airportCode;
     }
+
+    public int getIndicator() {
+        return indicator;
+    }
+
+    
 }
