@@ -27,12 +27,13 @@ public class AirportWritableComparable {
 
     @Override
     public void readFields(DataOutput dataOutput) throws IOException {
-        dataOutput.write(airportCode);
-        dataOutput.write(indicator);
+      airportCode = dataInput.readInt();
+
     }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-
+        dataOutput.write(airportCode);
+        dataOutput.write(indicator);
     }
 }
