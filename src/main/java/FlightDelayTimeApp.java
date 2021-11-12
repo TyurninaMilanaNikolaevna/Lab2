@@ -1,2 +1,1 @@
-package lab2
-        
+package lab2;
