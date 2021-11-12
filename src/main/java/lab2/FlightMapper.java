@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class FlightMapper extends Mapper<LongWritable, Text, AirportWritableComparable, Text> {
 
-    public static int AIRPORT_CODE_POSITION = 0;
+    public static int DEST_AIRPORT_ID_POSITION = 14;
     public static int AIRPORT_DESCRIPTION_POSITION = 1;
     public static int INDICATOR = 0;
 
