@@ -22,7 +22,7 @@ public class AirportWritableComparable {
     }
 
     @Override
-    public int CompareTo(AirportWritableComparable object) {
+    public int CompareTo(Object object) {
         return 0;
     }
 
