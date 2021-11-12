@@ -2,5 +2,5 @@ package lab2;
 
 public class AirportReducer {
 
-    protected 
+    protected void 
 }
