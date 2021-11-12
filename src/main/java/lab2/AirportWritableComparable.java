@@ -22,12 +22,12 @@ public class AirportWritableComparable {
 
     @Override
     public int CompareTo(AirportWritableComparable object) {
-        
+
     }
 
     @Override
     public void readFields(DataOutput dataOutput) throws IOException {
-
+        dataOutput.write();
     }
 
     @Override
