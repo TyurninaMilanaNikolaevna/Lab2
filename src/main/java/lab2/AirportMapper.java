@@ -13,10 +13,10 @@ public class AirportMapper extends Mapper <LongWritable, Text, AirportWritableCo
 
     @Override
     protected void map(LongWritable key, Text value, Mapper <LongWritable, Text, AirportWritableComparable, Text>.Context context) throws IOException, InterruptedException {
-        String[] airportCodeAndDescription = value.toString().split(",");
+        String[] airportsCode, airportsDescription = value.toString().split(",");
         if (key.get() != 0) {
-            int airportCode = Integer.parseInt(airportCodeAndDescription[AIRPORT_CODE_POSITION]);
-            String airportDescription = airportCodeAndDescription[AIRPORT_DESCRIPTION_POSITION];
+            int airportCode = Integer.parseInt(airportsCode[AIRPORT_CODE_POSITION]);
+            String airportDescription = airportsDescription[AIRPORT_DESCRIPTION_POSITION];
 
         }
 
