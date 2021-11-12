@@ -9,5 +9,7 @@ public class AirportWritableComparable {
         this.indicator = indicator;
     }
 
-    
+    public getAirportCode() {
+        return airportCode;
+    }
 }
