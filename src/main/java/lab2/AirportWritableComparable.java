@@ -1,5 +1,8 @@
 package lab2;
 
+import java.io.DataOutput;
+import java.io.IOException;
+
 public class AirportWritableComparable {
     private int airportCode;
     private int indicator;
@@ -23,7 +26,10 @@ public class AirportWritableComparable {
     }
 
     @Override
-    public void readFields()
+    public void readFields(DataOutput dataOutput) throws IOException {
+
+    }
 
     @Override
+    public void write()
 }
