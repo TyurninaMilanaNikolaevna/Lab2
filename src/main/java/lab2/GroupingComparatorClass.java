@@ -4,7 +4,10 @@ import org.apache.hadoop.io.WritableComparable;
 
 public class GroupingComparatorClass extends WritableComparator {
 
+    public GroupingComparatorClass() {
 
+    }
+    
     @Override
     public int compare (Object a, Object b) {
         return Integer.compare(((AirportWritableComparable) a).getAirportCode, ((AirportWritableComparable) b).getAirportCode);
