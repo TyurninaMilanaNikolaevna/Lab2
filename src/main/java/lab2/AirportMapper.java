@@ -10,8 +10,8 @@ public class AirportMapper extends Mapper <LongWritable, Text, , Text> {
     public static int AIRPORT_DESCRIPTION_POSITION = 1;
 
     @Override
-    protected void map()
-        
+    protected void map() throws IOException
+
 
 }
 
