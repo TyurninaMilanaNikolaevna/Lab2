@@ -12,7 +12,7 @@ public class AirportMapper extends Mapper <LongWritable, Text, AirportWritableCo
     public static int AIRPORT_DESCRIPTION_POSITION = 1;
 
     @Override
-    protected void map() throws IOException, InterruptedException {
+    protected void map(LongWritable key, ) throws IOException, InterruptedException {
 
     }
 }
