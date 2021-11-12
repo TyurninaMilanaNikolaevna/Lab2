@@ -2,5 +2,5 @@ package lab2;
 
 public class AirportReducer {
 
-    protected void reduce()
+    protected void reduce(AirportWritableComparable)
 }
