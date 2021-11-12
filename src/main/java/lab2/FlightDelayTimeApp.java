@@ -1,7 +1,7 @@
 package lab2;
 
 
-import 
+import org.apache.hadoop.fs.Path;
 
 public class FlightDelayTimeApp {
     public static void main(String[] args) throws Exception {
