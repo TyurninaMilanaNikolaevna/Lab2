@@ -23,7 +23,7 @@ public class AirportWritableComparable {
     }
 
     @Override
-    public 
+    public void readFields()
 
     @Override
 }
