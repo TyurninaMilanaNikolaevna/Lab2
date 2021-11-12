@@ -28,7 +28,7 @@ public class AirportWritableComparable {
     @Override
     public void readFields(DataInput dataInput) throws IOException {
       airportCode = dataInput.readInt();
-
+      indicator = dataInput.readInt();
     }
 
     @Override
