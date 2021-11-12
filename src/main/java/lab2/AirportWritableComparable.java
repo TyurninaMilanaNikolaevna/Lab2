@@ -17,5 +17,5 @@ public class AirportWritableComparable {
         return indicator;
     }
 
-    
+    public int CompareTo()
 }
