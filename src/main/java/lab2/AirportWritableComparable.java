@@ -31,5 +31,5 @@ public class AirportWritableComparable {
     }
 
     @Override
-    public void write()
+    public void write(DataOutput dataOutput) throws IOException
 }
