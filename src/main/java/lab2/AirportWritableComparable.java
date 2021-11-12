@@ -1,10 +1,12 @@
 package lab2;
 
+import org.apache.hadoop.io.WritableComparable;
+
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class AirportWritableComparable {
+public class AirportWritableComparable implements WritableComparable {
     private int airportCode;
     private int indicator;
 
