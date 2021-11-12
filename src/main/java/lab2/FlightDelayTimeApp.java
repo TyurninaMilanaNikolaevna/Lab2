@@ -2,6 +2,7 @@ package lab2;
 
 
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class FlightDelayTimeApp {
     public static void main(String[] args) throws Exception {
