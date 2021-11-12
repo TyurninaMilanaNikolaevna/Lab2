@@ -11,6 +11,7 @@ public class FlightMapper extends Mapper<LongWritable, Text, AirportWritableComp
     public static int DEST_AIRPORT_ID_POSITION = 14;
     public static int ARR_DELAY_POSITION = 18;
     public static int INDICATOR = 1;
+    public static 
 
     @Override
     protected void map(LongWritable key, Text value, Mapper <LongWritable, Text, AirportWritableComparable, Text>.Context context) throws IOException, InterruptedException {
