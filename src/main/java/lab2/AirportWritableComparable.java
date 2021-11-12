@@ -1,5 +1,6 @@
 package lab2;
 
+import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
@@ -22,7 +23,7 @@ public class AirportWritableComparable {
 
     @Override
     public int CompareTo(AirportWritableComparable object) {
-
+        return 0;
     }
 
     @Override
