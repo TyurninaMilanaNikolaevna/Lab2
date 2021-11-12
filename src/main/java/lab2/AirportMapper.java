@@ -10,6 +10,7 @@ public class AirportMapper extends Mapper <LongWritable, Text, AirportWritableCo
 
     public static int AIRPORT_CODE_POSITION = 0;
     public static int AIRPORT_DESCRIPTION_POSITION = 1;
+    public static int INDICATOR = 0;
 
     @Override
     protected void map(LongWritable key, Text value, Mapper <LongWritable, Text, AirportWritableComparable, Text>.Context context) throws IOException, InterruptedException {
@@ -17,7 +18,7 @@ public class AirportMapper extends Mapper <LongWritable, Text, AirportWritableCo
         if (key.get() != 0) {
             int airportCode = Integer.parseInt(airportsCode[AIRPORT_CODE_POSITION]);
             String airportDescription = airportsDescription[AIRPORT_DESCRIPTION_POSITION];
-            context.write(new AirportWritableComparable(airportCode, 0), new Text(airportDescription));
+            context.write(new AirportWritableComparable(airportCode, INDICATOR), new Text(airportDescription));
         }
     }
 }
