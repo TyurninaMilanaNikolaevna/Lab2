@@ -18,8 +18,8 @@ public class FlightDelayTimeApp {
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
 
         job.setPartitionerClass(AirportPartitioner.class);
-        job.setReducerClass(AirportReducer.class);
         job.setGroupingComparatorClass(GroupingComparator.class);
+        job.setReducerClass(AirportReducer.class);
         job.setMapOutputKeyClass(AirportWritableComparable.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
