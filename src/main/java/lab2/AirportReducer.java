@@ -21,6 +21,16 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
 
         while (iterator.hasNext()) {
             float delayTime = Float.parseFloat(iterator.next().toString());
+            sumDelayTime += delayTime;
+
+            if (delayTime < minDelayTime) {
+                minDelayTime = delayTime;
+            }
+            if (delayTime > maxDelayTime) {
+                maxDelayTime = delayTime;
+            }
+            counter++;
+
             if 
             context.write();
         }
