@@ -13,6 +13,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         float minDelayTime = Float.MAX_VALUE;
         float maxDelayTime = 0;
         float sumDelayTime = 0;
+        float averageDelayTime = 0;
 
         int counter = 0;
 
@@ -31,7 +32,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             }
             counter++;
 
-            if 
+            averageDelayTime = 
             context.write();
         }
     }
