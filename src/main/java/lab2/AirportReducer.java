@@ -20,7 +20,8 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         Text airportDescription = new Text(iterator.next());
 
         while (iterator.hasNext()) {
-            float delayTime = float
+            float delayTime = Float.parseFloat(iterator.next().toString());
+            if 
             context.write();
         }
     }
