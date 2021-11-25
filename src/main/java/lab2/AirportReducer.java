@@ -11,7 +11,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
     protected void reduce(AirportWritableComparable key, Iterable<Text> values, Reducer<AirportWritableComparable, Text, Text, Text>.Context context) throws IOException, InterruptedException {
         Iterator<Text> iterator = values.iterator();
         if (iterator.hasNext()) {
-            Text airportDescription = iterator.next();
+            Text airportDescription = Text(iterator.next());
         }
         context.write();
     }
