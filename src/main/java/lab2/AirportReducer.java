@@ -14,6 +14,8 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         float maxDelayTime = 0;
         float sumDelayTime = 0;
 
+        int counter = 0;
+
         Iterator<Text> iterator = values.iterator();
         Text airportDescription = new Text(iterator.next());
 
