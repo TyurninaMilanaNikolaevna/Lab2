@@ -12,8 +12,7 @@ public class AirportReducer {
         Iterator<Text> iterator = values.iterator();
         if (iterator.hasNext()) {
             Text airportDescription = iterator.next();
-
         }
-
+        context.write();
     }
 }
