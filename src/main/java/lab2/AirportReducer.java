@@ -33,8 +33,8 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             counter++;
 
             averageDelayTime = sumDelayTime / counter;
-            
-            context.write();
+
+            context.write(airportDescription, );
         }
     }
 }
