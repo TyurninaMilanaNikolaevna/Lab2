@@ -15,9 +15,11 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         float sumDelayTime = 0;
 
         Iterator<Text> iterator = values.iterator();
-        if (iterator.hasNext()) {
-            Text airportDescription = new Text(iterator.next());
+        Text airportDescription = new Text(iterator.next());
+
+        while (iterator.hasNext()) {
+            
+            context.write();
         }
-        context.write();
     }
 }
