@@ -18,17 +18,16 @@ public class AirportWritableComparable implements WritableComparable {
     public int getAirportCode() {
         return airportCode;
     }
-
-    public int getIndicator() {
-        return indicator;
-    }
-
+    
     @Override
     public int compareTo(Object object) {
-        if (this.airportCode != ((AirportWritableComparable) object).airportCode) {
-            return Integer.compare(this.airportCode, ((AirportWritableComparable) object).airportCode);
+        int objectAirportCode = ((AirportWritableComparable) object).airportCode;
+        int objectIndicator = ((AirportWritableComparable) object).indicator;
+
+        if (this.airportCode != objectAirportCode) {
+            return Integer.compare(this.airportCode, objectAirportCode);
         }
-        else return Integer.compare(this.indicator, ((AirportWritableComparable) object).indicator);
+        else return Integer.compare(this.indicator, objectIndicator);
     }
 
     @Override
