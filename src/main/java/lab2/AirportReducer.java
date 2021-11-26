@@ -5,11 +5,14 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.logging.Logger;
 
 public class AirportReducer extends Reducer<AirportWritableComparable, Text, Text, Text> {
 
     @Override
     protected void reduce(AirportWritableComparable key, Iterable<Text> values, Reducer<AirportWritableComparable, Text, Text, Text>.Context context) throws IOException, InterruptedException {
+
+        private static Logger log = Logger.getLogger(AirportReducer.class.getName());
 
         float minDelayTime = Float.MAX_VALUE;
         float maxDelayTime = 0;
