@@ -14,7 +14,6 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         float minDelayTime = Float.MAX_VALUE;
         float maxDelayTime = 0;
         float sumDelayTime = 0;
-        float averageDelayTime = 0;
 
         int counter = 0;
 
@@ -34,7 +33,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             sumDelayTime += delayTime;
         }
 
-        averageDelayTime = sumDelayTime / counter;
+        float averageDelayTime = sumDelayTime / counter;
 
         if (counter > 0) {
             String answer = "\nMin Delay Time: " + minDelayTime +
