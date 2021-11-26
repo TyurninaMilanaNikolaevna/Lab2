@@ -8,12 +8,10 @@ import java.util.Iterator;
 import java.util.logging.Logger;
 
 public class AirportReducer extends Reducer<AirportWritableComparable, Text, Text, Text> {
+    private static Logger log = Logger.getLogger(AirportReducer.class.getName());
 
     @Override
     protected void reduce(AirportWritableComparable key, Iterable<Text> values, Reducer<AirportWritableComparable, Text, Text, Text>.Context context) throws IOException, InterruptedException {
-
-        private static Logger log = Logger.getLogger(AirportReducer.class.getName());
-
         float minDelayTime = Float.MAX_VALUE;
         float maxDelayTime = 0;
         float sumDelayTime = 0;
@@ -42,6 +40,9 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             String answer = "\nMin Delay Time: " + minDelayTime +
                     "\nMax Delay Time: " + maxDelayTime +
                     "\nAverage Delay Time: " + averageDelayTime;
+
+            log.info("Message");
+            log.info(answer);
             context.write(airportDescription, new Text(answer));
         }
     }
