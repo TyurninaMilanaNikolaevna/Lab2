@@ -44,7 +44,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
                     "\nAverage Delay Time: " + averageDelayTime;
 
             LOG.info("Message");
-            log.info(answer);
+            LOG.info(answer);
             context.write(airportDescription, new Text(answer));
         }
     }
