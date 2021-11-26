@@ -33,13 +33,13 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             counter++;
             sumDelayTime += delayTime;
             averageDelayTime = sumDelayTime / counter;
-
-            if (counter > 0) {
-                String answer = "Min Delay Time: " + minDelayTime +
-                        "\nMax Delay Time: " + maxDelayTime +
-                        "\nAverage Delay Time: " + averageDelayTime;
-                context.write(airportDescription, new Text(answer));
-            }
+        }
+        
+        if (counter > 0) {
+            String answer = "Min Delay Time: " + minDelayTime +
+                    "\nMax Delay Time: " + maxDelayTime +
+                    "\nAverage Delay Time: " + averageDelayTime;
+            context.write(airportDescription, new Text(answer));
         }
     }
 }
