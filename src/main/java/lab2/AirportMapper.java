@@ -19,7 +19,7 @@ public class AirportMapper extends Mapper <LongWritable, Text, AirportWritableCo
         if (key.get() > 0) {
 
             int airportCode = Integer.parseInt(airportCodeAndDescription[AIRPORT_CODE_POSITION]);
-            String airportDescription = airportCodeAndDescription[AIRPORT_DESCRIPTION_POSITION];
+            String airportDescription = airportCodeAndDescription[AIRPORT_DESCRIPTION_POSITION].replace("\"", "");
             context.write(new AirportWritableComparable(airportCode, INDICATOR), new Text(airportDescription));
         }
     }
