@@ -36,7 +36,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         }
 
         if (counter > 0) {
-            String answer = "Min Delay Time: " + minDelayTime +
+            String answer = "\nMin Delay Time: " + minDelayTime +
                     "\nMax Delay Time: " + maxDelayTime +
                     "\nAverage Delay Time: " + averageDelayTime;
             context.write(airportDescription, new Text(answer));
