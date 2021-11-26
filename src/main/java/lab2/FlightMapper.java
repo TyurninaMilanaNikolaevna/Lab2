@@ -11,7 +11,9 @@ public class FlightMapper extends Mapper<LongWritable, Text, AirportWritableComp
     public static int DEST_AIRPORT_ID_POSITION = 14;
     public static int ARR_DELAY_POSITION = 18;
     public static int INDICATOR = 1;
+    public static int ZERO = 0;
     public static final String SPLITTER = ",";
+
 
     @Override
     protected void map(LongWritable key, Text value, Mapper <LongWritable, Text, AirportWritableComparable, Text>.Context context) throws IOException, InterruptedException {
@@ -21,7 +23,7 @@ public class FlightMapper extends Mapper<LongWritable, Text, AirportWritableComp
         if (key.get() > 0) {
             int airportCode = Integer.parseInt(flightDescription[DEST_AIRPORT_ID_POSITION]);
             String flightDelay = flightDescription[ARR_DELAY_POSITION];
-            if (Float.parseFloat(flightDelay) != 0) {
+            if (flightDelay.length() != ZERO && Float.parseFloat(flightDelay) != ZERO) {
                 context.write(new AirportWritableComparable(airportCode, INDICATOR), new Text(flightDelay));
             }
         }
