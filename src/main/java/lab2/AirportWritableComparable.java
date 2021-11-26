@@ -6,7 +6,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class AirportWritableComparable implements WritableComparable {
+public class AirportWritableComparable implements WritableComparable<AirportWritableComparable> {
     private int airportCode;
     private int indicator;
 
@@ -18,7 +18,7 @@ public class AirportWritableComparable implements WritableComparable {
     public int getAirportCode() {
         return airportCode;
     }
-    
+
     @Override
     public int compareTo(Object object) {
         int objectAirportCode = ((AirportWritableComparable) object).airportCode;
