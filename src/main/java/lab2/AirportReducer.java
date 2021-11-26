@@ -10,6 +10,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 public class AirportReducer extends Reducer<AirportWritableComparable, Text, Text, Text> {
+    private static final Log LOG = LogFactory.getLog(AirportReducer.class);
 
     @Override
     protected void reduce(AirportWritableComparable key, Iterable<Text> values, Reducer<AirportWritableComparable, Text, Text, Text>.Context context) throws IOException, InterruptedException {
@@ -42,7 +43,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
                     "\nMax Delay Time: " + maxDelayTime +
                     "\nAverage Delay Time: " + averageDelayTime;
 
-            log.info("Message");
+            LOG.info("Message");
             log.info(answer);
             context.write(airportDescription, new Text(answer));
         }
