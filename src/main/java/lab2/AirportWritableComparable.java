@@ -6,7 +6,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class AirportWritableComparable implements WritableComparable<AirportWritableComparable> {
+public class AirportWritableComparable implements WritableComparable {
     private int airportCode;
     private int indicator;
 
