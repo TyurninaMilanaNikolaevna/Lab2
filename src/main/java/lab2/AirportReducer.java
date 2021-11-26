@@ -40,7 +40,6 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             String answer = "\nMin Delay Time: " + minDelayTime +
                     "\nMax Delay Time: " + maxDelayTime +
                     "\nAverage Delay Time: " + averageDelayTime;
-            System.out.println(answer);
             context.write(airportDescription, new Text(answer));
         }
     }
