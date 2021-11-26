@@ -15,7 +15,9 @@ public class FlightMapper extends Mapper<LongWritable, Text, AirportWritableComp
 
     @Override
     protected void map(LongWritable key, Text value, Mapper <LongWritable, Text, AirportWritableComparable, Text>.Context context) throws IOException, InterruptedException {
-        String[] flightDescription = value.toString().split(SPLITTER);
+        String[] flightDescription = value.toString()
+                .replace("\"", "")
+                .split(SPLITTER);
         if (key.get() > 0) {
             int airportCode = Integer.parseInt(flightDescription[DEST_AIRPORT_ID_POSITION]);
             String flightDelay = flightDescription[ARR_DELAY_POSITION];
