@@ -8,6 +8,7 @@ import java.util.Iterator;
 
 public class AirportReducer extends Reducer<AirportWritableComparable, Text, Text, Text> {
 
+    @Override
     protected void reduce(AirportWritableComparable key, Iterable<Text> values, Reducer<AirportWritableComparable, Text, Text, Text>.Context context) throws IOException, InterruptedException {
 
         float minDelayTime = Float.MAX_VALUE;
