@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fd96be7-6707-43de-b2d7-38a7a2f83cfa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab2/AirportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/AirportMapper.java" afterDir="false" />
-    </list>
+    <list default="true" id="4fd96be7-6707-43de-b2d7-38a7a2f83cfa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
